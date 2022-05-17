@@ -566,10 +566,6 @@ contract FFC is ERC20("FistFarmCoin", "FFC")  {
         _;
     }
 
-    function isMinter(address account) public view returns (bool) {
-        return minters[account];
-    }
-
     function addMinter(address account) external onlyMinter {
         _addMinter(account);
     }
